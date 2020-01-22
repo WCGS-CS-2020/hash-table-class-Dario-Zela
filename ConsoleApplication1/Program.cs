@@ -52,7 +52,10 @@ namespace ConsoleApplication1
         public HashTable(int capacity, Func<T, int> HashAlg, Func<int, int> StepFunc)
         {
             arr = new LinkedList<T>[capacity];
-            arr.Initialize();
+            for(int i = 0; i < arr.Length; i++)
+            {
+                arr.SetValue(new LinkedList<T>(), i);
+            }
             if (HashAlg != null)
             {
                 this.HashAlg = HashAlg;
