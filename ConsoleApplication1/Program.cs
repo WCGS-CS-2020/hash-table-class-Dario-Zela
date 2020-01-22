@@ -24,7 +24,7 @@ namespace ConsoleApplication1
                 return sum;
             }
         }
-        double LoadFactor
+        public double LoadFactor
         {
             get
             {
